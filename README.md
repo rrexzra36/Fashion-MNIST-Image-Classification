@@ -43,7 +43,7 @@ Model dibangun menggunakan arsitektur **Convolutional Neural Network (CNN)** den
 Model ini dikompilasi menggunakan optimizer `adam` dan fungsi loss `sparse_categorical_crossentropy` karena meliki lebih dari 2 kelas.
 
 ### *Evaluation*
-Kinerja model dievaluasi menggunakan metrik `accuracy` pada data pengujian. Selain itu, kurva `accuracy` dan loss selama pelatihan dan validasi juga diplot untuk memastikan model belajar dengan baik dan tidak mengalami overfitting (ketika model terlalu hafal data latih dan tidak bisa generalisasi ke data baru).
+Kinerja model dievaluasi menggunakan metrik `accuracy` pada data pengujian. Selain itu, kurva `accuracy` dan loss selama pelatihan dan validasi juga diplot untuk memastikan model belajar dengan baik dan tidak mengalami *overfitting* (ketika model terlalu hafal data latih dan tidak bisa generalisasi ke data baru).
 
 ### *Deployment*
 Model yang telah dilatih disimpan dalam sebuah file `cnn_model.keras`. Model ini kemudian diintegrasikan ke dalam sebuah aplikasi web sederhana yang dibangun menggunakan Streamlit. Aplikasi ini memungkinkan pengguna untuk mengunggah gambar item pakaian dan mendapatkan prediksi klasifikasi dari model secara langsung.
@@ -51,13 +51,13 @@ Model yang telah dilatih disimpan dalam sebuah file `cnn_model.keras`. Model ini
 ## **Persiapan**
 
 Sumber data pelatihan: 
-Fashion MNIST Dataset dari `tensorflow.keras.datasets`
+Fashion MNIST Dataset via `tensorflow.keras.datasets`
 ```
 fashion_mnist = keras.datasets.fashion_mnist
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 ```
 
-*Command environment*:
+*Setup environment*:
 ```
 // virtual enviroment setup
 python -m venv .env --> membuat virtual enviroment
